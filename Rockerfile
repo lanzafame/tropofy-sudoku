@@ -1,0 +1,31 @@
+# build image
+FROM python:2-slim
+MAINTAINER Adrian Lanzafame <adrianlanzafame92@gmail.com>
+
+LABEL Description="This is image builds a Sudoku Solver Tropofy wheel"
+
+COPY development.ini setup.py requirements.txt /app/
+COPY tropofy_sudoku /app/tropofy_sudoku
+
+RUN mkdir /build
+
+WORKDIR /app
+RUN pip install tropofy && \
+    pip wheel --wheel-dir=/build -r requirements.txt
+
+EXPORT /build
+
+# run image
+FROM python:2-slim
+IMPORT /build
+
+WORKDIR /app
+
+COPY development.ini setup.py requirements.txt /app/
+COPY tropofy_sudoku /app/tropofy_sudoku
+
+RUN pip install . --no-index --find-links=/build
+RUN pip install -e .
+
+CMD [ "tropofy_run" ]
+TAG lanzafame/tropofy-sudoku:latest

@@ -5,3 +5,8 @@ tropofy_sudoku.egg-info
 tropofy_sudoku/sudokuout.txt
 tropofy_sudoku/Sudoku.lp
 tropofy_sudoku/sudoku_solver.db
+build
+dist
+plan
+terraform.tfstate
+terraform.tfstate.backup
