@@ -10,3 +10,4 @@ dist
 plan
 terraform.tfstate
 terraform.tfstate.backup
+development.ini
