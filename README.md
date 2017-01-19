@@ -32,12 +32,16 @@ Once the image is built, push it to [Docker Hub](https://hub.docker.com) or a pr
 
 ## Deployment Instructions
 
+### Configuration
+
 Define [AWS Access key and Secret key](https://console.aws.amazon.com/iam/home?#security_credential) in a Terraform variable file (keys.tfvars) like this:
 ```
 access_key = "youraccesskey"
 secret_key = "yoursecretkey"
 public_key = "yourpublickey"
 ```
+
+### Run
 
 Run terraform plan:
 ```
@@ -55,7 +59,11 @@ Note: to convert your key pair to AWS PEM encoding, just `cp id_rsa id_rsa.pem` 
 
 Terraform also provisions the EC2 instance via SSH remote exec. It installs docker, starts the docker service and then pulls/runs the docker image upload to http://hub.docker.com/r/lanzafame/tropofy-sudoku.
 
+### Accessing deployed app
+
 Once Terraform has finished building the infrastructure it will spit out the public IP address of the EC2 instance, which will present you with a Tropofy login page when accessed from a browser.
+
+### Tear-down
 
 When you are finished using the deployed app, run `terraform destroy` to delete all the infrastructure that it deployed:
 
