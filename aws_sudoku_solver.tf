@@ -18,6 +18,13 @@ resource "aws_instance" "sudoku_solver" {
             "sudo service docker start",
             "sudo docker run -d -p 80:9123 lanzafame/tropofy-sudoku:latest"
         ]
+    connection {
+        type = "ssh"
+        user = "ec2-user"
+        private_key = "${var.private_key}"
+        timeout = "2m"
+        agent = false
+    }
     }
     key_name = "${aws_key_pair.tropofy_ssh_access.key_name}"
 }
