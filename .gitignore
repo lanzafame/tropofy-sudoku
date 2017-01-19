@@ -1,2 +1,7 @@
 tropofy_venv
 tropofy_sudoku.egg-info
+.idea
+.DS_Store
+tropofy_sudoku/sudokuout.txt
+tropofy_sudoku/Sudoku.lp
+tropofy_sudoku/sudoku_solver.db
