@@ -2,7 +2,7 @@
 
 ## Deployment Instructions
 
-Define (AWS Access key and Secret key)[https://console.aws.amazon.com/iam/home?#security_credential] in a Terraform variable file (keys.tfvars) like this:
+Define [AWS Access key and Secret key](https://console.aws.amazon.com/iam/home?#security_credential) in a Terraform variable file (keys.tfvars) like this:
 ```
 access_key = "youraccesskey"
 secret_key = "yoursecretkey"
@@ -23,4 +23,4 @@ Terraform will spin up a security group in the AWS VPC, create a key pair using 
 
 Note: to convert your key pair to AWS PEM encoding, just `cp id_rsa id_rsa.pem` and then `sudo chmod 400 id_rsa.pem`.
 
-Terraform also provisions the EC2 instance via SSH remote exec. It installs docker, starts the docker service and then pulls/runs the docker image upload to hub.docker.com/r/lanzafame/tropofy-sudoku.
+Terraform also provisions the EC2 instance via SSH remote exec. It installs docker, starts the docker service and then pulls/runs the docker image upload to http://hub.docker.com/r/lanzafame/tropofy-sudoku.
