@@ -36,8 +36,10 @@ Once the image is built, push it to [Docker Hub](https://hub.docker.com) or a pr
 
 Define [AWS Access key and Secret key](https://console.aws.amazon.com/iam/home?#security_credential) in a Terraform variable file (keys.tfvars) like this:
 ```
+# aws keys
 access_key = "youraccesskey"
 secret_key = "yoursecretkey"
+# ssh keys
 public_key = "yourpublickey"
 private_key = "path/to/your/private/key"
 ```
