@@ -39,6 +39,7 @@ Define [AWS Access key and Secret key](https://console.aws.amazon.com/iam/home?#
 access_key = "youraccesskey"
 secret_key = "yoursecretkey"
 public_key = "yourpublickey"
+private_key = "path/to/your/private/key"
 ```
 
 ### Run
