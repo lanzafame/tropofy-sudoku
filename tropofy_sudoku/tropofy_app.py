@@ -1,3 +1,22 @@
+"""
+Authors: www.tropofy.com and www.gurobi.com
+
+Copyright 2015 Tropofy Pty Ltd, all rights reserved.
+Copyright 2013, Gurobi Optimization, Inc.
+
+This source file (where not indicated as under the copyright of Gurobi)
+is part of Tropofy and governed by the Tropofy terms of service
+available at: http://www.tropofy.com/terms_of_service.html
+
+Parts of the formulation provided by Gurobi have been modified.
+The original example is in the Gurobi installation in the example file dietmodel.py
+
+Used with permission.
+
+This source file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
+"""
 import os
 import StringIO
 from pulp import *
