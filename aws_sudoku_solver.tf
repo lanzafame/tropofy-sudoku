@@ -21,7 +21,7 @@ resource "aws_instance" "sudoku_solver" {
     connection {
         type = "ssh"
         user = "ec2-user"
-        private_key = "${var.private_key}"
+        private_key = "${file(var.private_key)}"
         timeout = "2m"
         agent = false
     }
